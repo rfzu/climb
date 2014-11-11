@@ -77,7 +77,7 @@ describe AttrsController do
 
       it "redirects to the created attr" do
         post :create, {:attr => valid_attributes}, valid_session
-        response.should redirect_to(Attr.last)
+        response.should redirect_to(attrs_url)
       end
     end
 

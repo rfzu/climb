@@ -77,7 +77,7 @@ describe ExercisesController do
 
       it "redirects to the created exercise" do
         post :create, {:exercise => valid_attributes}, valid_session
-        response.should redirect_to(Exercise.last)
+        response.should redirect_to(exercises_path)
       end
     end
 
